@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // Composante classe définie en JSX
-export default class MaComposante extends React.Component {
+export default class MaComposanteClasse extends React.Component {
   render() {
     return (
       <section className="post">
