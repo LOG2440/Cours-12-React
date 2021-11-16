@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ButtonState = () => {
+const LiaisonBidirectionnelle = () => {
   const [value, setValue] = useState("");
   return (
     <div>
@@ -11,4 +11,4 @@ const ButtonState = () => {
   );
 };
 
-export default ButtonState;
+export default LiaisonBidirectionnelle;
