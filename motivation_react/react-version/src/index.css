@@ -1,0 +1,29 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#root>div {
+  margin: 5px;
+  width: 100%;
+}
+
+.img-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid black;
+}
+
+.img-data>* {
+  align-self: center;
+  flex: 1 1 0;
+}
+
+.img-data>img {
+  flex: 0;
+  width: 125px;
+  height: 125px;
+  margin-right: 1em;
+}
