@@ -4,6 +4,8 @@ Ces projets ont été créés avec l'utilitaire [Create React App](https://githu
 
 Le répertoire `note_cours` contient plusieurs exemples de base sur l'utilisation de la librairie React.
 
+Le répertoire `motivation_react` contient un exemple de base sur la motivation d'utiliser React. Cet exemple implémente le même site web avec du code `JS` de base ainsi qu'à l'aide de la librairie React. Pour plus d'informations, consultez le [README](./motivation_react/README.md) dans le répertoire.
+
 
 ## Configuration du projet
 
