@@ -13,10 +13,10 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<ComposanteParent />} />
-        <Route path="/about" element={<HookEffet />} />
-        <Route path="/users" element={<UserDisplay />} />
-        <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/articles" element={<ParagraphPage />} />
+        <Route path="/buttons" element={<ButtonPage />} />
+        <Route path="/hooks" element={<HookEffet />} />
+        <Route path="/users" element={<UserDisplay />} />
       </Routes>
     </Router>
   );
