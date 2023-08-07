@@ -13,6 +13,7 @@ const HookEffectFetch = ({ userId = 1 }) => {
   const [name, setName] = useState("");
   useEffect(() => {
     const fetchData = async () => {
+      // userId = Math.floor(Math.random()*9)+1;
       const user = await fetchUser(userId);
       setName(user.name);
     };
