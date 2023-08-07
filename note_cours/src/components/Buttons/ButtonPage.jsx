@@ -8,7 +8,7 @@ const ButtonPage = () => {
         <h2>BOUTON sans état (implémentation invalide)</h2>
         <Button />
       </div>
-x      <hr />
+      <hr />
       <div>
         <h2>BOUTON fonctionnel avec état</h2>
         <ButtonState />

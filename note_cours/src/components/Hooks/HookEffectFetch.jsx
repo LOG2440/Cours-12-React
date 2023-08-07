@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 const url = "https://jsonplaceholder.typicode.com/users";
 
 const fetchUser = async (userId) => {
-  const options = { headers: { "accept-language": "fr" } };
   const response = await fetch(`${url}/${userId}`, options);
   const user = await response.json();
   return user;
 };
 
-const HookEffetFetch = ({ userId = 1 }) => {
+const HookEffectFetch = ({ userId = 1 }) => {
   const [name, setName] = useState("");
   useEffect(() => {
     const fetchData = async () => {
@@ -22,4 +21,4 @@ const HookEffetFetch = ({ userId = 1 }) => {
   return <div>{name}</div>;
 };
 
-export default HookEffetFetch;
+export default HookEffectFetch;

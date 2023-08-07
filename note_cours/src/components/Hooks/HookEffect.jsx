@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const HookEffet = () => {
-    const [n, setN] = useState(0)
+const HookEffect = () => {
+    const [n, setN] = useState(0);
 
     useEffect(() => {
-        document.title = `Vous avez cliqué ${n} fois`
-    })
+        document.title = `Vous avez cliqué ${n} fois`;
+    });
 
     return (
         <div>
@@ -13,6 +13,6 @@ const HookEffet = () => {
             <button onClick={() => setN(n + 1)}>Cliquez ici</button>
         </div>
     )
-}
+};
 
-export default HookEffet
+export default HookEffect;

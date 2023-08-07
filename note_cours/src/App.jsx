@@ -1,11 +1,10 @@
 import "./App.css";
 import Header from "./components/Header";
-import HookEffet from "./components/HookEffet";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UserDisplay from "./components/UserDIsplay";
 import ButtonPage from "./components/Buttons/ButtonPage";
 import ParagraphPage from './components/Paragraphs/ParagraphPage';
 import ParentComponent from "./components/MainPage/ParentComponent";
+import HookPage from "./components/Hooks/HookPage";
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
         <Route exact path="/" element={<ParentComponent />} />
         <Route path="/paragraphs" element={<ParagraphPage />} />
         <Route path="/buttons" element={<ButtonPage />} />
-        <Route path="/hooks" element={<HookEffet />} />
-        <Route path="/users" element={<UserDisplay />} />
+        <Route path="/hooks" element={<HookPage />} />
       </Routes>
     </BrowserRouter>
   );

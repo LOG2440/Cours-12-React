@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HookEffetFetch from "./HookEffetFetch";
+import HookEffectFetch from "./HookEffectFetch";
 
 const UserDisplay = () => {
   const [value, setValue] = useState("");
@@ -11,9 +11,8 @@ const UserDisplay = () => {
     <div>
       <input onChange={(e) => setValue(e.target.value)} value={value} />
       <p>Vous avez entré: {value}</p>
-      <button onClick={(_) => setValue("")}>Effacer</button>
       <p>Utilisateur : </p>
-      {validateInput(value) ? <HookEffetFetch userId={value} /> : <></>}
+      {validateInput(value) ? <HookEffectFetch userId={value} /> : <></>}
     </div>
   );
 };
