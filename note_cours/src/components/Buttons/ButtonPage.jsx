@@ -5,18 +5,18 @@ const ButtonPage = () => {
   return (
     <>
       <div>
-        <p>BOUTON sans état</p>
+        <h2>BOUTON sans état (implémentation invalide)</h2>
         <Button />
       </div>
-      <hr />
+x      <hr />
       <div>
-        <p>BOUTON avec classe</p>
-        <ButtonClass />
+        <h2>BOUTON fonctionnel avec état</h2>
+        <ButtonState />
       </div>
       <hr />
       <div>
-        <p>BOUTON fonctionnel avec état</p>
-        <ButtonState />
+        <h2>BOUTON avec classe</h2>
+        <ButtonClass />
       </div>
     </>
   );

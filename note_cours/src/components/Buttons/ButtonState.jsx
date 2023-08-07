@@ -1,3 +1,7 @@
+/* Le hook useState permet de persister un état entre chaque exécution de la fonction
+  useState retourne l'état et une fonction qui permet de modifier l'état.
+  La persistance est propre à chaque instance du Component
+*/
 import { useState } from "react";
 
 const ButtonState = () => {
