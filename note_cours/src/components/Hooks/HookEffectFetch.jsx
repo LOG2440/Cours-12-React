@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const url = "https://jsonplaceholder.typicode.com/users";
 
 const fetchUser = async (userId) => {
+  const options = { headers: { "accept-language": "fr" } };
   const response = await fetch(`${url}/${userId}`, options);
   const user = await response.json();
   return user;
