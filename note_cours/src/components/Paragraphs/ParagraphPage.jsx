@@ -1,22 +1,25 @@
 import Article from "./Article";
 import Paragraphs from "./Paragraphs";
 import ParagraphsPairs from "./ParagraphsPairs";
+
 const ParagraphPage = () => {
   return (
     <>
       <div>
-        <p>Paragraphes</p>
+        <h2>Paragraphes</h2>
         <Paragraphs />
       </div>
       <hr />
       <div>
-        <p>Paragraphes pairs seulement</p>
+        <h2>Paragraphes pairs seulement</h2>
+        <h3>Trouvez la différence dans le HTML généré</h3>
         <ParagraphsPairs />
       </div>
       <hr />
       <div>
-        <p>Article et ses auteurs</p>
-        <Article title="React Tutorial" authors={["Nikolay Radoev", "Kevin Gauthier"]} />
+        <h2>Article et ses auteurs (passage par propriété)</h2>
+        <Article title="Introduction à React" authors={["Nikolay Radoev", "Kevin Gauthier"]} />
+        <Article title="React (suite)" authors={["Kevin Gauthier"]} />
       </div>
     </>
   );

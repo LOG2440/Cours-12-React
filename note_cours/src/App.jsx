@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<ParentComponent />} />
-        <Route path="/articles" element={<ParagraphPage />} />
+        <Route path="/paragraphs" element={<ParagraphPage />} />
         <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/hooks" element={<HookEffet />} />
         <Route path="/users" element={<UserDisplay />} />
