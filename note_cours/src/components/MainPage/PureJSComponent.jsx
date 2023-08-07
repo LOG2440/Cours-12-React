@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // Composante fonctionnelle définie en JS
-export default (props) => {
+const PureJSComponent = () => {
   const h1Element = React.createElement("h1", null, "Mon article: Composante en JS pur");
   const pElement = React.createElement(
     "p",
@@ -15,3 +15,5 @@ export default (props) => {
   );
   return sectionElement;
 };
+
+export default PureJSComponent;
