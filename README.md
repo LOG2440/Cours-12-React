@@ -123,3 +123,9 @@ function App() {
   );
 }
 ```
+
+## Reducer
+
+React utilise la notion de _reducer_ pour une des manières de gérer des états partagés par plusieurs composantes différentes. L'exemple dans le répertoire [reducer](./reducer/) illustre comment utiliser une fonction _reducer_ en JS pur. Pour plus d'informations, consultez le fichier [README](./reducer/README.MD).
+
+Pour une application concrète du _reducer_ dans React avec le patron SAM (_Station Action Model_), consultez [cet entrepôt du cours](https://github.com/LOG2440/Cours-13-React-ClassManager) qui contient un exemple de l'utilisation du hook `useReducer` pour gérer un état partagé par plusieurs composantes.
