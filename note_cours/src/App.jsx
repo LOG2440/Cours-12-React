@@ -7,16 +7,22 @@ import ParentComponent from "./components/MainPage/ParentComponent";
 import HookPage from "./components/Hooks/HookPage";
 import UserDisplay from "./components/Hooks/UserDisplay";
 
+import { useState } from "react";
+
+
 function App() {
+
+  const [n, setN] = useState(0);
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header n={n} />
       <Routes>
-        <Route exact path="/" element={<ParentComponent />} />
+        <Route exact path="/" element={<ParentComponent n={n} />} />
         <Route path="/paragraphs" element={<ParagraphPage />} />
         <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/hooks" >
-          <Route index path="" element={<HookPage />} />
+          <Route index path="" element={<HookPage val={n} updateVal={setN} />} />
           <Route path="user" element={<UserDisplay />} />
         </Route>
       </Routes>

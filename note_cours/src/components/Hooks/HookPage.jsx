@@ -2,9 +2,14 @@ import HookEffect from "./HookEffect";
 import TwoWayBinding from "./TwoWayBinding";
 import UserDisplay from "./UserDisplay";
 
-const HookPage = () => {
+const HookPage = ({ updateVal, val }) => {
   return (
     <>
+      <div>
+        <h1>Valeur de n dans "HookPage": {val}</h1>
+        <button onClick={() => updateVal(val + 1)}>Incrémenter "n"</button>
+        <button onClick={() => updateVal(val - 1)}>Décrémenter "n"</button>
+      </div>
       <div>
         <h2>Liaison bi-directionnelle</h2>
         <TwoWayBinding />

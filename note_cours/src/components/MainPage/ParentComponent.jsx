@@ -4,8 +4,11 @@ import ClassComponent from "./ClassComponent";
 import PureJSComponent from "./PureJSComponent";
 import InterpolationComponent from "./InterpolationComponent";
 
-const ParentComponent = () => (
+const ParentComponent = ({ n }) => (
   <>
+    <div>
+      <h1>Valeur de n dans "ParentComponent" : {n}</h1>
+    </div>
     <div>
       <p>Composante fonctionnelle simple</p>
       <BaseComponent />

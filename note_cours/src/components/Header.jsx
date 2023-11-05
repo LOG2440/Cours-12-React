@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ n }) => {
   return (
     <nav id='navbar'>
       <ul>
@@ -18,6 +18,9 @@ const Header = () => {
         </li>
         <li>
           <Link to="/hooks/user">Fetch</Link>
+        </li>
+        <li>
+          "n" : {n}
         </li>
       </ul>
     </nav>
