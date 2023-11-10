@@ -124,6 +124,54 @@ function App() {
 }
 ```
 
+#### Partage de données
+
+Comme le contexte JS est toujours le même, on peut partager des données entre les "pages" puisque chaque component enfant de `Routes` se trouve dans le même contexte JS.
+
+L'exemple suivant présente une variable `n` qui se trouve dans le parent `App` et est partagée par plusiuers autres components (`Header`,`ParentComponent` et `HookPage`). De plus, la fonction `setN` est passée à `HookPage` qui peut modifier `n` et ce changement sera visible partout grâce au component `Header` partagé par toutes les pages.
+
+```jsx
+function App() {
+  const [n, setN] = useState(0);
+  return (
+    <BrowserRouter>
+      <Header n={n} />
+      <Routes>
+        <Route exact path="/" element={<ParentComponent n={n} />} />
+        <Route path="/hooks" >
+          <Route index path="" element={<HookPage val={n} updateVal={setN} />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const HookPage = ({ updateVal, val }) => {
+  return (
+    <>
+      <div>
+        <h1>Valeur de n dans "HookPage": {val}</h1>
+        <button onClick={() => updateVal(val + 1)}>Incrémenter "n"</button>
+        <button onClick={() => updateVal(val - 1)}>Décrémenter "n"</button>
+      </div>
+    </>
+  );
+};
+
+const Header = ({ n }) => {
+  return (
+    <nav id='navbar'>
+      <ul>
+        <li>
+          "n" : {n}
+        </li>
+      </ul>
+    </nav>
+  );
+};
+```
+Le code est disponible sur la branche [feature/shared-data](`https://github.com/LOG2440/Cours-12-React/tree/feature/shared-data`).
+
 ## Reducer
 
 React utilise la notion de _reducer_ pour une des manières de gérer des états partagés par plusieurs composantes différentes. L'exemple dans le répertoire [reducer](./reducer/) illustre comment utiliser une fonction _reducer_ en JS pur. Pour plus d'informations, consultez le fichier [README](./reducer/README.MD).
