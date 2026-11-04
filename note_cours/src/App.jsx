@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route exact path="/" element={<ParentComponent />} />
+        <Route path="/" element={<ParentComponent />} />
         <Route path="/paragraphs" element={<ParagraphPage />} />
         <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/hooks" >

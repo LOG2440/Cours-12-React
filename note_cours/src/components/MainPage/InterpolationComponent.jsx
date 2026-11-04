@@ -1,5 +1,3 @@
-import React from 'react'
-
 const InterpolationComponent = () => {
   const blog = {
     title: "Mon titre interpolé",
